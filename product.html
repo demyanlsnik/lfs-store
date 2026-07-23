@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Товар | LFS Store</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="header">
+<div class="back-container">
+
+    <a href="index.html" class="back-btn">
+        ← Назад до каталогу
+    </a>
+
+</div>
+
+<a href="index.html" class="logo">
+LFS
+</a>
+
+</header>
+
+<section class="product-page">
+
+<div class="product-image">
+
+    <img id="productImage">
+
+    <div id="gallery" class="gallery"></div>
+
+</div>
+<div class="product-info-page">
+
+<span id="productCategory"></span>
+
+<h1 id="productName"></h1>
+
+<div class="rating">
+
+★★★★★
+
+<span>4.9 </span>
+
+</div>
+
+<p id="productDescription"></p>
+
+<div class="price">
+
+    <span class="current" id="productPrice"></span>
+
+    <span class="old" id="productOldPrice"></span>
+
+</div>
+
+<div class="stock">
+
+    ✅ Є в наявності
+
+</div>
+
+<h3>Характеристики</h3>
+
+<ul id="productDetails"></ul>
+
+<div class="product-buttons">
+
+    <button id="addCartPage" class="buy-btn">
+
+        🛒 Додати у кошик
+
+    </button>
+    
+    <button id="favoritePage" class="favorite-page">
+
+    ❤️ У вибране
+
+</button>
+
+    <button id="buyTelegram" class="telegram-btn">
+
+        📩 Замовити у Telegram
+
+    </button>
+
+</div>
+</div>
+
+</section>
+
+<script src="data/products.js"></script>
+
+<script src="js/cart.js"></script>
+
+<script src="js/favorites.js"></script>
+
+<script src="js/product.js"></script>
+
+</body>
+
+</html>

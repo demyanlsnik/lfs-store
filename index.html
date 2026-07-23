@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LFS Store</title>
+
+    <meta name="description" content="LFS Store — сучасний інтернет-магазин товарів на будь-який смак.">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+    <a href="#" class="logo">
+        LFS
+    </a>
+
+    <div class="header-buttons">
+
+            </div>
+
+</header>
+<div class="sort-box">
+
+    <select id="sortProducts">
+
+        <option value="default">За замовчуванням</option>
+
+        <option value="cheap">Спочатку дешеві</option>
+
+        <option value="expensive">Спочатку дорогі</option>
+
+        <option value="name">За назвою</option>
+
+    </select>
+
+</div>
+           <button id="searchBtn" class="icon-btn" title="Пошук">
+    <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+
+<button id="favoriteBtn" class="icon-btn" title="Вибране">
+    <i class="fa-regular fa-heart"></i>
+</button>
+
+<button id="cartBtn" class="icon-btn" title="Кошик">
+
+    <i class="fa-solid fa-cart-shopping"></i>
+
+    <span id="cartCount">0</span>
+
+</button>
+        </div>
+
+    </header>
+<section class="search-section">
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Пошук товарів..."
+    >
+
+</section>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>LFS STORE</h1>
+
+            <p>
+
+                Ремені • Гаманці • Портмоне • Шкіряні вироби • Все що потрібно в одному місці
+
+            </p>
+
+            <a href="#catalog" class="hero-button">
+
+                Переглянути каталог
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- CATALOG -->
+
+    <section id="catalog" class="catalog">
+
+        <div class="section-title">
+
+            <h2>Популярні товари</h2>
+
+        </div>
+<div class="categories">
+
+    <button class="category-btn active" data-category="all">Усі</button>
+
+    <button class="category-btn" data-category="Портмоне">Портмоне</button>
+
+    <button class="category-btn" data-category="Гаманці">Гаманці</button>
+
+    <button class="category-btn" data-category="Сумки">Сумки</button>
+
+    <button class="category-btn" data-category="Ремені">Ремені</button>
+
+</div>
+        <div id="productGrid" class="product-grid">
+
+        </div>
+
+    </section>
+
+    <!-- CART -->
+
+   <aside id="cart" class="cart-panel">
+
+        <div class="cart-header">
+
+            <h2>Кошик</h2>
+
+            <button id="closeCart">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <div id="cartItems" class="cart-items">
+
+        </div>
+
+        <div class="cart-footer">
+
+            <h3>
+
+                Разом:
+
+                <span id="cartTotal">
+
+                    0 грн
+
+                </span>
+
+            </h3>
+
+            <button id="telegramOrder">
+
+                Оформити через Telegram
+
+            </button>
+
+        </div>
+
+    </aside>
+	<aside id="favoritesPanel" class="favorites-panel">
+
+    <div class="cart-header">
+
+        <h2>Вибране</h2>
+
+        <button id="closeFavorites">
+            ✕
+        </button>
+
+    </div>
+
+    <div id="favoritesItems">
+
+    </div>
+
+</aside>
+
+    <div id="overlay"></div>
+
+    <!-- SCRIPTS -->
+
+    <div id="toast" class="toast">
+
+    ✅ Товар додано в кошик
+
+</div>
+<div id="productModal" class="modal">
+
+    <div class="modal-content">
+
+        <button id="closeModal" class="close-modal">
+            &times;
+        </button>
+
+        <img id="modalImage" src="" alt="">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+	<ul id="modalDetails"></ul>
+
+        <div class="modal-price">
+
+            <span id="modalPrice"></span>
+
+        </div>
+
+        <button id="modalCartButton" class="buy-btn">
+            Додати у кошик
+        </button>
+
+
+    </div>
+
+</div>
+<script src="data/products.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/sort.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/telegram.js"></script>
+
+</body>
+</html>
